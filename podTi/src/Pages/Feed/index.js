@@ -3,19 +3,14 @@ import {
     View,
     StatusBar, 
     StyleSheet,
-    Image,
-    TouchableOpacity,
-    Text,     
-    TextInput,     
-    Button,
-    ImageBackground,
+    Text,
     FlatList
 } from  'react-native';
 import dataFeed from '../../Assets/Dictionaries/feed.json'
 import { FeedFlatlist } from '../../Components/FeedFlatlist';
 //import pod01 from '../../Assets/img/pod01.png';
 
-const qtdFeed = 5;
+const qtdFeed = 4;
 
 //export default function Feed({navigation}){ 
   export default class Feed extends React.Component{   
@@ -48,9 +43,12 @@ const qtdFeed = 5;
                                        feed._id <= idF );
         
         if (maisFeed.length) {
+            console.log( "##--1--##");
             console.log("Add " + maisFeed.length + " feed");
             console.log("# " + maisFeed + " ||");
             console.log( dataFeed.feed);
+            console.log( feed);
+            console.log( "##--1--##");
 
         // incrementar pagina
         this.setState({
@@ -68,14 +66,22 @@ const qtdFeed = 5;
         este é um bom lugar para instanciar a requisição.
     */
     componentDidMount = () => {
+        // const { loading } = this.state;        
+        // if (loading) {
+        //     return;
+        // } else {
+        //     this.setState({
+        //         loading: false
+        //     })
+        // }
+        // this.loadingFeed();
+        this.loadingMoreFeed();
+    }
+
+    loadingMoreFeed = () => {
         const { loading } = this.state;
-        
         if (loading) {
             return;
-        } else {
-            this.setState({
-                loading: false
-            })
         }
 
         this.loadingFeed();
@@ -93,47 +99,19 @@ const qtdFeed = 5;
         <>
             <StatusBar barStyle="dark-content" backgroundColor="#fff" /> 
             <View style={styles.container}>
-            <Text>Teste 1.1</Text>
-            {/* <Image source={pod01}/> */}
+                <Text>Versão 1.1</Text>
+            
                 <FlatList
                     data={feed}
-                    // onEndReached={() => this.loadingMoreFeed()}
-                    // onEndReachedThreshold={0.2}
+                    onEndReached={() => this.loadingMoreFeed()}
+                    onEndReachedThreshold={0.1}
                     keyExtractor={(item) => String(item._id)}
                     renderItem={({item}) =>{
                         return(                           
-                            <FeedFlatlist feed={item} />                            
+                            <FeedFlatlist feed={item} navegador={this.props.navigation}/>                            
                         )}}
-                />
-                    
-               
-{/*             
-
-            <TouchableOpacity>
-            <Image
-                style={styles.image}
-                source={require('../../Assets/img/f01.png')}                 
-            />
-            </TouchableOpacity>    
-
-            <Button 
-            title='Proximo'
-            onPress={ () => navigation.navigate('Details')}
-            /> 
-            <FlatList
-                data={dataFeed}
-                keyExtractor={item => item}
-                renderItem={({item}) => (
-                    <TouchableOpacity  >
-                    <View>
-                        {item}
-                    </View>
-                    </TouchableOpacity> 
-                )}
-            /> */}
-
+                />                   
             </View>
-
         </>
     )
     } else {
@@ -149,27 +127,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        paddingVertical: 30,
-        paddingHorizontal: 30,
+        paddingVertical: 20,
+        paddingHorizontal: 20,
     },
-    title: {
-        color: '#fff',
-        fontSize: 24,
-        fontWeight: 'bold',
-    },
-    input: {
-       backgroundColor: '#1F1e25',
-       color: '#fff',
-       fontSize: 18,
-       padding: 15,
-       marginTop: 20,
-       borderRadius: 10,
-    },
-    image: {
-        width: 300,
-        height: 150,
-        padding: 30,
-        marginTop: 20,
-        borderRadius: 10
-    }
   });

@@ -9,8 +9,9 @@ import {
     
 } from 'react-native';
 
-import  Icon  from 'react-native-vector-icons/FontAwesome';
+import  Icon  from 'react-native-vector-icons/FontAwesome5';
 import pod01 from '../../src/Assets/img/pod01.png';
+import pod02 from '../../src/Assets/img/pod02.png';
 
 export function FeedFlatlist({navegador , feed}){
     console.log("## | " + feed.title )
@@ -18,23 +19,33 @@ export function FeedFlatlist({navegador , feed}){
         <TouchableOpacity  
             style={styles.buttonSkill}
             feed={feed}
-            onPress={ () => navegador.navigate('Details', { sub: feed.subtitle })}
+            onPress={ () => navegador.navigate('Details', { 
+                                                            id: feed._id,
+                                                            title: feed.title,
+                                                            subtitle: feed.subtitle,
+                                                            description: feed.description  
+                                                          })}
              
         > 
                 
             <ImageBackground
-                source={pod01}
+                source={pod02}
+                //source={{ uri: feed.image }}
                 style={styles.image}
             >
-                <View style={styles.content}> 
-                                       
-                    {/* <View style={styles.content}> */}
-                        <Icon name="play" style={styles.icon} size={32} color="#ff8c00" />                    
+                <View style={styles.content}>                                                         
+                        <Icon 
+                            name="play-circle" 
+                            style={styles.icon} 
+                            size={40} 
+                            color="#ff8c00" 
+                        />                    
                         <Text style={styles.textTitle}>
-                            {feed.title}</Text>
-                        <Text style={styles.textSubTitle}>{feed.subtitle}
+                            {feed.title}
                         </Text>
-                    {/* </View> */}
+                        <Text style={styles.textSubTitle}>
+                            {feed.subtitle}
+                        </Text>                    
                 </View>
             </ImageBackground>           
                                  
@@ -59,7 +70,7 @@ const styles = StyleSheet.create({
     textSubTitle: {
         color: '#fff',       
         fontSize: 16,
-        fontWeight: 'bold',  
+        fontWeight: '900',  
         paddingLeft: 20      
     },
     image: {

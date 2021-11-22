@@ -43,6 +43,7 @@ const qtdFeed = 4;
                                        feed._id <= idF );
         
         if (maisFeed.length) {
+            //teste console
             console.log( "##--1--##");
             console.log("Add " + maisFeed.length + " feed");
             console.log("# " + maisFeed + " ||");
@@ -115,9 +116,7 @@ const qtdFeed = 4;
         </>
     )
     } else {
-        return (
-            <Text>Não funcionou</Text>
-        )
+        return (null)
     }
   }  
 }

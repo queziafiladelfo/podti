@@ -5,79 +5,89 @@
             "title": "Game DEV: Por trás do código",
             "subtitle": "PodTi #01",
             "datetime": "2019-11-01T12:00-0500",
-            "image": "f01.png"
+            "image": "pod01.png",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
         },
         {
             "_id": 2,
-            "title": "Game DEV: Por trás do código",
+            "title": "Desmitificando o Biohacking ",
             "subtitle": "PodTi #02",
             "datetime": "2019-11-01T12:00-0500",
-            "image": "f01.png"
+            "image": "pod01.png",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
         },
         {
             "_id": 3,
-            "title": "Game DEV: Por trás do código",
+            "title": "Autodefesa digital",
             "subtitle": "PodTi #03",
             "datetime": "2019-11-01T12:00-0500",
-            "image": "f01.png"
+            "image": "pod01.png",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
         },
         {
             "_id": 4,
-            "title": "Game DEV: Por trás do código",
+            "title": "As techs e a bolsa em 2021",
             "subtitle": "PodTi #04",
             "datetime": "2019-11-01T12:00-0500",
-            "image": "f01.png"
+            "image": "pod01.png",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
         },
         {
             "_id": 5,
-            "title": "Game DEV: Por trás do código",
+            "title": "A internet que amamos odiar",
             "subtitle": "PodTi #05",
             "datetime": "2019-11-01T12:00-0500",
-            "image": "f01.png"
+            "image": "pod01.png",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
         },
         {
             "_id": 6,
-            "title": "Game DEV: Por trás do código",
+            "title": "Luz, câmera e… inglês! ",
             "subtitle": "PodTi #06",
             "datetime": "2019-11-01T12:00-0500",
-            "image": "f01.png"
+            "image": "pod01.png",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
         },
         {
             "_id": 7,
-            "title": "Game DEV: Por trás do código",
+            "title": "M&A: quando 2+2=5 ",
             "subtitle": "PodTi #07",
             "datetime": "2019-11-01T12:00-0500",
-            "image": "f01.png"
+            "image": "pod01.png",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
         },
         {
             "_id": 8,
-            "title": "Game DEV: Por trás do código",
+            "title": "O mundo precisa de Devs!",
             "subtitle": "PodTi #08",
             "datetime": "2019-11-01T12:00-0500",
-            "image": "f01.png"
+            "image": "pod01.png",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
         },
         {
             "_id": 9,
-            "title": "Game DEV: Por trás do código",
+            "title": "Trabalhando com inovação ",
             "subtitle": "PodTi #09",
             "datetime": "2019-11-01T12:00-0500",
-            "image": "f01.png"
+            "image": "pod01.png",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
         },
         {
             "_id": 10,
-            "title": "Game DEV: Por trás do código",
+            "title": "Negociando em inglês ",
             "subtitle": "PodTi #10",
             "datetime": "2019-11-01T12:00-0500",
-            "image": "f01.png"
+            "image": "pod01.png",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
         }
         

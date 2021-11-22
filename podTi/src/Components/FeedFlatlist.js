@@ -37,7 +37,7 @@ export function FeedFlatlist({navegador , feed}){
                         <Icon 
                             name="play-circle" 
                             style={styles.icon} 
-                            size={40} 
+                            size={50} 
                             color="#ff8c00" 
                         />                    
                         <Text style={styles.textTitle}>

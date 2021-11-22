@@ -4,14 +4,15 @@ import {
     View, 
     Text, 
     ImageBackground,
-    Button
+    Button,
+    TouchableOpacity
 } from  'react-native';
 
 //import pod01 from '../../src/Assets/img/pod01.png';
 import pod02 from '../../Assets/img/pod02.png';
 import  Icon  from 'react-native-vector-icons/FontAwesome';
 
-export default function Details({route}){        
+export default function Details({ navigation, route }){        
         return(
             <>
                 <ImageBackground 
@@ -51,13 +52,21 @@ export default function Details({route}){
                                     size={45} 
                                     color="#ff8c00" 
                     />
-                    <Icon 
-                                    name="comments" 
-                                    style={styles.icon} 
-                                    size={45} 
-                                    color="#ff8c00" 
-                    />
-
+                    {/* <TouchableOpacity
+                        onPress={ () => navigation.navigate('Comments')}
+                    > */}
+                        <Icon 
+                                        name="comments" 
+                                        style={styles.icon} 
+                                        size={45} 
+                                        color="#ff8c00"
+                                        onPress ={
+                                            () => {
+                                                navigation.navigate('Comments')
+                                            }
+                                        } 
+                        />
+                    {/* </TouchableOpacity> */}
                 </View>
                 
                 

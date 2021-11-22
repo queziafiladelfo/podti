@@ -98,10 +98,10 @@ const qtdFeed = 4;
 
         //fragment <></>
         <>
-            <StatusBar barStyle="dark-content" backgroundColor="#fff" /> 
-            <View style={styles.container}>
-                <Text>Versão 1.1</Text>
+            <StatusBar barStyle="dark-content" backgroundColor="#fff" />
             
+            <View style={styles.container}>
+            <Text style={styles.title}>Podti</Text> 
                 <FlatList
                     data={feed}
                     onEndReached={() => this.loadingMoreFeed()}
@@ -126,7 +126,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        paddingVertical: 20,
-        paddingHorizontal: 20,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
     },
+    title: {
+        paddingVertical: 20,
+        paddingHorizontal: 30,
+        fontSize: 25,
+        fontWeight: '600',
+        color: '#ff8c00'
+    }
   });

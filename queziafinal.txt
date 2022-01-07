@@ -1,0 +1,14 @@
+1.Video: 
+	https://www.youtube.com/watch?v=zGbm3IukxQk
+2.Código-fonte:
+	https://github.com/queziafiladelfo/podti
+
+3. Observações:
+	- Como na etapa I utilizei um dispositivo físico plugado no ubs para 
+	a realização dos testes seguindo os passos 1,2 e 3 da documentaçao 
+	oficial: https://reactnative.dev/docs/running-on-device
+	- Arquivo sql dentro da pasta raiz (podti) com o nome 'pod.sql'
+	- Comando para execução:
+	  	$ yarn react-native start 
+	  	$ yarn react-native run-android
+		

@@ -10,8 +10,7 @@ import {
 } from 'react-native';
 
 import  Icon  from 'react-native-vector-icons/FontAwesome5';
-import pod01 from '../../src/Assets/img/pod01.png';
-import pod02 from '../../src/Assets/img/pod02.png';
+import { getImagem } from '../api';
 
 export function FeedFlatlist({navegador , feed}){
     console.log("## | " + feed.title )
@@ -23,14 +22,14 @@ export function FeedFlatlist({navegador , feed}){
                                                             id: feed._id,
                                                             title: feed.title,
                                                             subtitle: feed.subtitle,
-                                                            description: feed.description  
+                                                            description: feed.description,
+                                                            image: feed.image   
                                                           })}
              
         > 
                 
             <ImageBackground
-                source={pod02}
-                //source={{ uri: feed.image }}
+                source={getImagem(feed.image)}
                 style={styles.image}
             >
                 <View style={styles.content}>                                                         

@@ -8,15 +8,14 @@ import {
     TouchableOpacity
 } from  'react-native';
 
-//import pod01 from '../../src/Assets/img/pod01.png';
-import pod02 from '../../Assets/img/pod02.png';
 import  Icon  from 'react-native-vector-icons/FontAwesome';
+import { getImagem } from '../../api';
 
 export default function Details({ navigation, route }){        
         return(
             <>
                 <ImageBackground 
-                source={pod02}
+                source={getImagem(route.params.image)}
                 style={styles.image}
                 >
                     <Button

@@ -6,13 +6,10 @@ import {
     Text,
     FlatList
 } from  'react-native';
-import dataFeed from '../../Assets/Dictionaries/feed.json'
 import { FeedFlatlist } from '../../Components/FeedFlatlist';
-//import pod01 from '../../Assets/img/pod01.png';
+import { getFeeds } from '../../api';
 
-const qtdFeed = 4;
 
-//export default function Feed({navigation}){ 
   export default class Feed extends React.Component{   
     
     //inicializar a classe de feeds
@@ -20,7 +17,7 @@ const qtdFeed = 4;
         super(props);
         
         this.state = { 
-            nextPage: 0,
+            nextPage: 1,
             feed: [],
             loading: false 
         }
@@ -36,28 +33,29 @@ const qtdFeed = 4;
             loading: true
         });
 
-        // carregar qtd no feed
-        const idI = nextPage * qtdFeed + 1;
-        const idF = idI + qtdFeed - 1;
-        const maisFeed = dataFeed.feed.filter((feed) => feed._id >= idI &&
-                                       feed._id <= idF );
         
-        if (maisFeed.length) {
-            //teste console
-            console.log( "##--1--##");
-            console.log("Add " + maisFeed.length + " feed");
-            console.log("# " + maisFeed + " ||");
-            console.log( dataFeed.feed);
-            console.log( feed);
-            console.log( "##--1--##");
-
-        // incrementar pagina
-        this.setState({
-            nextPage: nextPage + 1,
-            feed: [...feed, ...maisFeed],
-            loading: false
-        })
-        }                                    
+        getFeeds(nextPage).then((maisFeed) => {
+            if (maisFeed.length) {
+                //teste console
+                console.log( "##--1--##");
+                console.log("Add " + maisFeed.length + " feed");
+                console.log("# " + maisFeed + " ||");
+                console.log( "getFeeds.feed");
+                console.log( getFeeds.feed);
+                console.log( feed);
+                console.log( "##--1--##");
+    
+            // incrementar pagina 
+            this.setState({
+                nextPage: nextPage + 1,
+                feed: [...feed, ...maisFeed],
+                loading: false
+            })
+            }   
+        }).catch((erro) => {
+            console.error("getFeeds error: " + erro);
+        }) 
+                                 
     }
 
     /*
@@ -67,15 +65,6 @@ const qtdFeed = 4;
         este é um bom lugar para instanciar a requisição.
     */
     componentDidMount = () => {
-        // const { loading } = this.state;        
-        // if (loading) {
-        //     return;
-        // } else {
-        //     this.setState({
-        //         loading: false
-        //     })
-        // }
-        // this.loadingFeed();
         this.loadingMoreFeed();
     }
 
